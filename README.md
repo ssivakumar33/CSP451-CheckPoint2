@@ -42,3 +42,16 @@ To intentionally create a merge conflict, edit the same lines in one of:
 npm test
 npm run lint
 ```
+## User Authentication Feature
+
+This branch adds client-side validation for the login form.
+
+### Behavior Added
+
+- Prevents empty submissions
+- Validates email format
+- Displays inline error messages
+
+### Affected File(s)
+
+- `public/login.html`
