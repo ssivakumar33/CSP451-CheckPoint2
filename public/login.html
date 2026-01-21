@@ -26,6 +26,35 @@
       <p id="message" class="muted"></p>
     </form>
 
+  <!-- error message area added for UX feedback -->
+  <div id="error" style="color:red; margin-top:8px;"></div>
+</form>
+
+<script>
+  // Client-side validation for improved UX
+  const form = document.querySelector('#loginForm');
+  form.addEventListener('submit', (e) => {
+    const email = form.email.value.trim();
+    const password = form.password.value.trim();
+
+    // prevents submitting blank form
+    if (!email || !password) {
+      e.preventDefault();
+      document.getElementById('error').textContent = "Email and password required";
+      return;
+    }
+
+    // simple email structure validation (basic example)
+    if (!email.includes("@")) {
+      e.preventDefault();
+      document.getElementById('error').textContent = "Invalid email format";
+      return;
+    }
+
+    // clearing error state if valid
+    document.getElementById('error').textContent = "";
+  });
+</script>
     <p><a href="/">← Back</a></p>
     <script src="/login.js"></script>
   </main>
