@@ -54,3 +54,4 @@ This branch adds REST API endpoints for users.
 ### Affected File(s)
 - `src/routes/api.js`
 - `src/app.js`
+- Adds basic API endpoint support
