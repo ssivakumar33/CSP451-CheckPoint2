@@ -55,3 +55,15 @@ This branch adds client-side validation for the login form.
 ### Affected File(s)
 
 - `public/login.html`
+
+## API Endpoints Feature
+
+This branch adds REST API endpoints for users.
+
+### Behavior Added
+- GET /api/users returns all users
+- GET /api/users/:id returns a user by id
+
+### Affected File(s)
+- `src/routes/api.js`
+- `src/app.js`
