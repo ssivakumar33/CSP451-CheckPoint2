@@ -10,7 +10,7 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
-// Static frontend
+// Static frontend (public/)
 app.use(express.static(path.join(__dirname, "..", "public")));
 
 // Routes
@@ -22,12 +22,13 @@ app.use((req, res) => {
   res.status(404).json({ error: "Not Found" });
 });
 
-// Error handler (keep simple for learning)
+// Error handler
 app.use((err, req, res, next) => {
   console.error("Unhandled error:", err);
   res.status(500).json({ error: "Internal Server Error" });
 });
 
+// Start server
 const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
   console.log(`Server running at http://localhost:${PORT}`);
