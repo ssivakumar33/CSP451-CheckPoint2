@@ -55,3 +55,4 @@ This branch adds client-side validation for the login form.
 ### Affected File(s)
 
 - `public/login.html`
+Added screenshots section
